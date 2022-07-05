@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@section Scripts {
+    <script src="~/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+    <script src="~/js/cafe.js" asp-append-version="true"></script>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to OnlineCafe</h1>
+    <h3 class="display-8">Place your Order:</h3>
+</div>
+
+<div class="container">
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-secondary">
+            <input checked type="radio" name="drink" value="1" autocomplete="off" checked><img src="~/icons/coffee.svg" alt="Coffee" />
+        </label>
+        <label class="btn btn-outline-secondary">
+            <input type="radio" name="drink" value="2" autocomplete="off"><img src="~/icons/tea.svg" alt="Lemon Tea" />
+        </label>
+        <label class="btn btn-outline-secondary">
+            <input type="radio" name="drink" value="3" autocomplete="off"><img src="~/icons/hotchocolate.svg" alt="Hot Chocolate" />
+        </label>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <input type="button" id="sendButton" value="Create Order" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
